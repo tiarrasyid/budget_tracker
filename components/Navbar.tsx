@@ -12,8 +12,8 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const items = [
   { label: "Dashboard", link: "/" },
-  { label: "Transactions", link: "/Transactions" },
-  { label: "Manage", link: "/Manage" },
+  { label: "Transactions", link: "/transactions" },
+  { label: "Manage", link: "/manage" },
 ];
 
 function Navbar() {
@@ -66,7 +66,7 @@ function MobileNavbar() {
 function DesktopNavbar() {
   return (
     <div className="hidden border-separate border-b bg-background md:block">
-      <nav className="container flex items-center justify-between px-8">
+      <nav className="container flex items-center justify-between px-45 pr-6">
         <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
           <Logo />
           <div className="flex h-full">
@@ -75,9 +75,9 @@ function DesktopNavbar() {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ml-">
           <ThemeSwitcherBtn />
-          <UserButton afterSignOutUrl="/sign-in" />
+          <UserButton afterSignOutUrl="/sign-in"/>
         </div>
       </nav>
     </div>
