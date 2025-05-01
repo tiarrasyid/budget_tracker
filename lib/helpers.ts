@@ -1,4 +1,4 @@
-import { Currencies } from "@/hooks/currencies";
+import { Currencies } from "@/lib/currencies";
 
 export function DateToUTCDate(date: Date) {
     return new Date(

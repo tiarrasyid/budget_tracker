@@ -136,11 +136,12 @@ function CreateCategoryDialog({ type, successCallback, trigger }: Props) {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input
-                      defaultValue={""}
-                      placeholder="Category name"
-                      {...field}
-                    />
+                  <Input
+  placeholder="Category name"
+  {...field}
+  value={field.value ?? ""}
+/>
+
                   </FormControl>
                   <FormDescription>e.g. Food, Transport</FormDescription>
                 </FormItem>
@@ -202,7 +203,7 @@ function CreateCategoryDialog({ type, successCallback, trigger }: Props) {
         <DialogFooter>
           <DialogClose asChild>
             <Button
-              className="w-full"
+              className="w-flex"
               type="button"
               variant={"secondary"}
               onClick={() => {
@@ -215,7 +216,7 @@ function CreateCategoryDialog({ type, successCallback, trigger }: Props) {
           <Button
             onClick={form.handleSubmit(onSubmit)}
             disabled={isPending}
-            className="w-full"
+            className="w-flex"
           >
             {!isPending && "Create"}
             {isPending && <Loader2 className="animate-spin" />}

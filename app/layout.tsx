@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Budget Tracker",
-  description: "Final Project CSC M.Bachtiar Rasyid",
+  description: "Final Project CSC",
 };
 
 export default function RootLayout({

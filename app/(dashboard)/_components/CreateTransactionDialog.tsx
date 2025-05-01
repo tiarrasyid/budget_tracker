@@ -124,7 +124,7 @@ function CreateTransactionDialog({ trigger, type }: Props) {
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Input
-                      defaultValue={""}
+                     // defaultValue={""}
                       placeholder="Transaction description (optional)"
                       {...field}
                     />
@@ -224,7 +224,7 @@ function CreateTransactionDialog({ trigger, type }: Props) {
         <DialogFooter>
           <DialogClose asChild>
             <Button
-              className="w-full"
+              className="w-flex"
               type="button"
               variant={"secondary"}
               onClick={() => {
@@ -237,7 +237,7 @@ function CreateTransactionDialog({ trigger, type }: Props) {
           <Button
             onClick={form.handleSubmit(onSubmit)}
             disabled={isPending}
-            className="w-full"
+            className="w-flex"
           >
             {!isPending && "Create"}
             {isPending && <Loader2 className="animate-spin" />}

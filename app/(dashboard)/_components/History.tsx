@@ -43,7 +43,7 @@ function History({ userSettings }: { userSettings: UserSettings }) {
     historyDataQuery.data && historyDataQuery.data.length > 0;
 
   return (
-    <div className="px-45">
+    <div className="px-45 pb-30">
       <h2 className="pb-4 text-3xl font-bold">History</h2>
       <Card className="col-span-12 mt-2 w-full">
         <CardHeader className="gap-2">
